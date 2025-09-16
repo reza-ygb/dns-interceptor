@@ -49,10 +49,10 @@ mkdir -p "$BIN_DIR"
 
 # Download main script
 echo "📥 Downloading DNS Interceptor..."
-curl -fsSL "https://raw.githubusercontent.com/username/dns-interceptor/main/dns_interceptor.py" -o "$INSTALL_DIR/dns_interceptor.py"
+curl -fsSL "https://raw.githubusercontent.com/reza-ygb/dns-interceptor/master/dns_interceptor.py" -o "$INSTALL_DIR/dns_interceptor.py"
 
 # Download requirements
-curl -fsSL "https://raw.githubusercontent.com/username/dns-interceptor/main/requirements.txt" -o "$INSTALL_DIR/requirements.txt"
+curl -fsSL "https://raw.githubusercontent.com/reza-ygb/dns-interceptor/master/requirements.txt" -o "$INSTALL_DIR/requirements.txt"
 
 # Make executable
 chmod +x "$INSTALL_DIR/dns_interceptor.py"
@@ -129,14 +129,14 @@ echo "  sudo dns-interceptor -i eth0 --discovery-only    # Network discovery"
 echo "  sudo dns-interceptor -i eth0 --intercept-only    # Passive monitoring"
 echo ""
 echo "📚 Documentation:"
-echo "  https://github.com/username/dns-interceptor"
+echo "  https://github.com/reza-ygb/dns-interceptor"
 echo ""
 echo "⚠️  Remember:"
 echo "  • Root privileges required for network operations"
 echo "  • Use only on authorized networks"
 echo "  • Follow ethical hacking guidelines"
 echo ""
-echo "💡 Restart your terminal or run: source ~/.bashrc"
+echo "💡 Restart your terminal or run: source ~/.bashrc (یا برای zsh: source ~/.zshrc)"
 
 # Test installation
 echo "🧪 Testing installation..."
