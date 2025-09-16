@@ -195,10 +195,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 📧 **Email**: security@example.com
-- 💬 **Discord**: [Join our community](https://discord.gg/security)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/reza-ygb/dns-interceptor/issues)
-
----
+- 📧 **Email**: yaghobpoor@khu.ac.ir
 
 ⭐ **Star this repository** if you find it useful for your cybersecurity work!
