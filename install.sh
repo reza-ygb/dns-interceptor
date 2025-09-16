@@ -40,6 +40,7 @@ fi
 # Install directory
 INSTALL_DIR="$HOME/.local/share/dns-interceptor"
 BIN_DIR="$HOME/.local/bin"
+VENV_DIR="$INSTALL_DIR/venv"
 
 echo "📁 Installation directory: $INSTALL_DIR"
 
@@ -67,9 +68,13 @@ fi
 # Make executable
 chmod +x "$INSTALL_DIR/dns_interceptor.py"
 
-# Install Python dependencies
+# Create virtual environment and install dependencies (PEP 668 friendly)
 echo "📦 Installing Python dependencies..."
-python3 -m pip install --user -r "$INSTALL_DIR/requirements.txt"
+if [[ ! -d "$VENV_DIR" ]]; then
+    python3 -m venv "$VENV_DIR"
+fi
+"$VENV_DIR/bin/python" -m pip install --upgrade pip
+"$VENV_DIR/bin/pip" install -r "$INSTALL_DIR/requirements.txt"
 
 # Create wrapper script
 echo "🔧 Creating system command..."
@@ -78,6 +83,7 @@ cat > "$BIN_DIR/dns-interceptor" << 'EOF'
 
 # DNS Interceptor wrapper script
 INSTALL_DIR="$HOME/.local/share/dns-interceptor"
+VENV_DIR="$INSTALL_DIR/venv"
 
 # Check if running as root for network operations
 if [[ $EUID -ne 0 ]] && [[ "$*" != *"--help"* ]] && [[ "$*" != *"-h"* ]]; then
@@ -87,8 +93,11 @@ if [[ $EUID -ne 0 ]] && [[ "$*" != *"--help"* ]] && [[ "$*" != *"-h"* ]]; then
     exit 1
 fi
 
-# Execute main script
-exec python3 "$INSTALL_DIR/dns_interceptor.py" "$@"
+# Execute main script via venv python (preserve HOME under sudo)
+if [[ -n "$SUDO_USER" ]]; then
+    export HOME="/home/$SUDO_USER"
+fi
+exec "$VENV_DIR/bin/python" "$INSTALL_DIR/dns_interceptor.py" "$@"
 EOF
 
 chmod +x "$BIN_DIR/dns-interceptor"
