@@ -1,0 +1,18 @@
+#!/bin/bash
+# Wrapper installed by the Debian package
+APP_DIR="/opt/dns-interceptor"
+VENV_DIR="$APP_DIR/venv"
+
+# For sudo runs, keep user's HOME for cache/paths
+if [[ -n "$SUDO_USER" ]]; then
+  export HOME="/home/$SUDO_USER"
+fi
+
+if [[ $EUID -ne 0 ]] && [[ "$*" != *"--help"* ]] && [[ "$*" != *"-h"* ]]; then
+  echo "⚠️  Network operations require root privileges"
+  echo "💡 Run with: sudo dns-interceptor [options]"
+  echo "📖 For help: dns-interceptor --help"
+  exit 1
+fi
+
+exec "$VENV_DIR/bin/python" "$APP_DIR/dns_interceptor.py" "$@"

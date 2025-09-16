@@ -1,0 +1,21 @@
+Package: dns-interceptor
+Architecture: all
+Version: 2.0.1
+Priority: optional
+Section: utils
+Maintainer: Reza <security@example.com>
+Depends: python3 (>= 3.8), python3-venv, ca-certificates, iproute2, bash
+Filename: pool/main/d/dns-interceptor/dns-interceptor_2.0.1_all.deb
+Size: 9162
+MD5sum: c98d3896cbcbbe89773a0ef75586db7d
+SHA1: f5c3268709b2f6dbcce68f4776aed1f25d0c81eb
+SHA256: 7a3589ad0e6d8372a95fd89aba4bf3b8bc2db37440705366b43bcf3d89274998
+SHA512: 1fcec3c634a12c7078b92d0d12b9f1aac24960c6f475c9d8b196f64436231645e536ecb6954d26d0ac6410e0bac5ac15560eda0f18d014114bc024f3db1487d3
+Homepage: https://github.com/reza-ygb/dns-interceptor
+Description: DNS Interceptor - Professional Network Security & MITM Framework
+ This package installs DNS Interceptor under /opt/dns-interceptor, sets up a
+ dedicated Python virtual environment, and provides a 'dns-interceptor' CLI
+ in /usr/bin. Features: ARP spoofing, DNS monitoring/spoofing, PCAP export,
+ advanced memory cache, credential and token discovery. For authorized testing
+ and educational purposes only.
+

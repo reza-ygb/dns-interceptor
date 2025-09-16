@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+dns_interceptor.py
+install.sh
+pyproject.toml
+requirements.txt
+dns_interceptor.egg-info/PKG-INFO
+dns_interceptor.egg-info/SOURCES.txt
+dns_interceptor.egg-info/dependency_links.txt
+dns_interceptor.egg-info/entry_points.txt
+dns_interceptor.egg-info/requires.txt
+dns_interceptor.egg-info/top_level.txt

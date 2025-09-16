@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=DNS Interceptor
+Comment=Professional Network Security Analysis Tool
+Exec=gnome-terminal -- sudo dns-interceptor --help
+Icon=network-wired
+Terminal=true
+Type=Application
+Categories=System;Security;Network;

@@ -1,0 +1,2 @@
+[console_scripts]
+dns-interceptor = dns_interceptor:main
