@@ -1,0 +1,38 @@
+[build-system]
+requires = [
+  "setuptools>=68",
+  "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dns-interceptor"
+version = "2.0.1"
+description = "DNS Interceptor: Professional Network Security & MITM Framework"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Reza" }
+]
+keywords = [
+  "security", "cybersecurity", "mitm", "dns", "scapy", "pentest", "network-security", "pcap"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Topic :: Security",
+  "Environment :: Console",
+]
+dependencies = [
+  "scapy>=2.5.0"
+]
+
+[project.scripts]
+# CLI entry point installed as `dns-interceptor`
+"dns-interceptor" = "dns_interceptor:main"
+
+[tool.setuptools]
+# Single-module distribution
+py-modules = ["dns_interceptor"]
