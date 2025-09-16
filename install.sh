@@ -47,12 +47,22 @@ echo "📁 Installation directory: $INSTALL_DIR"
 mkdir -p "$INSTALL_DIR"
 mkdir -p "$BIN_DIR"
 
-# Download main script
+# Download main script with fallback to Release asset
 echo "📥 Downloading DNS Interceptor..."
-curl -fsSL "https://raw.githubusercontent.com/reza-ygb/dns-interceptor/master/dns_interceptor.py" -o "$INSTALL_DIR/dns_interceptor.py"
+if ! curl -fsSL "https://raw.githubusercontent.com/reza-ygb/dns-interceptor/master/dns_interceptor.py" -o "$INSTALL_DIR/dns_interceptor.py"; then
+    echo "⚠️  Raw download failed, trying GitHub Release asset..."
+    if ! curl -fsSL "https://raw.githubusercontent.com/reza-ygb/dns-interceptor/master/dns_interceptor.py" -o /dev/null; then
+        echo "ℹ️  Falling back to: https://github.com/reza-ygb/dns-interceptor/releases/download/v2.0.1/dns_interceptor.py"
+    fi
+    curl -fL "https://github.com/reza-ygb/dns-interceptor/releases/download/v2.0.1/dns_interceptor.py" -o "$INSTALL_DIR/dns_interceptor.py"
+fi
 
-# Download requirements
-curl -fsSL "https://raw.githubusercontent.com/reza-ygb/dns-interceptor/master/requirements.txt" -o "$INSTALL_DIR/requirements.txt"
+# Download requirements with fallback
+if ! curl -fsSL "https://raw.githubusercontent.com/reza-ygb/dns-interceptor/master/requirements.txt" -o "$INSTALL_DIR/requirements.txt"; then
+    echo "⚠️  Raw requirements download failed, trying GitHub Release asset..."
+    echo "ℹ️  Falling back to: https://github.com/reza-ygb/dns-interceptor/releases/download/v2.0.1/requirements.txt"
+    curl -fL "https://github.com/reza-ygb/dns-interceptor/releases/download/v2.0.1/requirements.txt" -o "$INSTALL_DIR/requirements.txt"
+fi
 
 # Make executable
 chmod +x "$INSTALL_DIR/dns_interceptor.py"
