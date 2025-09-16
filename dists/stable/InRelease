@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Date: Tue, 16 Sep 2025 19:54:37 +0000
+MD5Sum:
+ 8f9f4ffd21ea36f2879d7a04b929509f               38 Release
+ 2c9d19d905c11e0e897388c94c463838             1055 main/binary-amd64/Packages
+ cead4fc750d468bda21d439d5b6a5e68              712 main/binary-amd64/Packages.gz
+SHA1:
+ 28ba12fd671ae8445df2d1bc7345f9cea4a46e21               38 Release
+ af5d0a585e5fb0f6c81179a95ca6da933c2ce015             1055 main/binary-amd64/Packages
+ 0d144f53db4ef8803ba0fe8a45ba945e0a409edf              712 main/binary-amd64/Packages.gz
+SHA256:
+ f121f76a75f65ad34ad9dfda12d19e2a7508025e12f6f028fee7a180019e09c4               38 Release
+ c274ec39b37cd63b391ab814239ae263bf9cf61132cfb72f49ba2a255a8de721             1055 main/binary-amd64/Packages
+ 3618c48b852f952fd89e4d620a01f2990f9db66d98550d90d13f82b2296be2c3              712 main/binary-amd64/Packages.gz
+SHA512:
+ 242e505068fb4011036eb1a3c0a13eec3c8dbb5dda5eebea528bf2a89da1be3c847e0147e34a95cb0725c38fc37d75ff233c1e81b3c431015b33d8f6023cd442               38 Release
+ 119c7b713df4fab7c5ba2ad6faebe3ee2a23a3bbdbbd4fb4b65d5ede92e8512cf457c8807e4693b2addf42c315bc977b40cfdd086caf622c19b6abf6fe566119             1055 main/binary-amd64/Packages
+ 0444b136da1cf6e608a7ebb0d40ec2a3b3c80a1da4a9ed6a2dd6e3410ed3897da1a895e13d22c492a2bf540b014d9a6bedfd59a2cd22facdd4b5787fc5f03f9c              712 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEDN+bifVyHzZCY+5Z4KnDdnyzpDYFAmjJwWwACgkQ4KnDdnyz
+pDZUAA//SlAh8qZlVCEWCNXedXcTurQZPywnrqO/K+gCQMZ0ovsKx2kD1NPHJNbF
+9A2s+OvzIhGjPuoJos2eq82PGL3//Wpno0u6ANVgAHHNA97n/D0XkHEqcw2VcvYh
+T/LzwbmqTx1YTOHuXGVF8DCfluoeIGMqx6YEDqYhTMSEGv6GVQ0/D5fiZp1695T/
+jUklbIkc1k0M5lvfbLWfWqUvsANd9wHm2enycbuNpWSIDVOlhae2A74wjdJg/tb4
+vUSgDnSSW8BxHSzbPaojXbLoF6/eSIFdaobAmRcG2Q0t7pxhqHPaylSZ6jnc04LP
+XgmIlY2kc6m9RVLaLU2YKq2N7v1xk4L1lqmEzVR8yM92DfQtwLWyNaKDaNUfKZJZ
+rg/9cRT1nrxYlU1PhEa+AAdg0QN4yH3yCH0y0B5spsUsW9fA6S9k+jE3+Xi8t9Rc
+25qWH7HPPg0aqCnU1sMZNfLvfHSebJs6xta/5wEq04tY/7Lt4KgYk28IN8CbRBFq
+zT1CHvjBvSfAEzyf+E6FlRwCx38hBGeGc+FzEwC+ZVXWG0uioJ2axQ4oeieYZ7kV
+l4o1W1hpxkXVIjc/MUycuWsXIa49J55/LHwEN0TAKkr0HvVkTOFkGKXhnxuPBTKg
+doEb8qhQ9g7hdVlR3PB4Iyyers0Mka8e7LUitwJKaB1c18bVUzI=
+=A/l9
+-----END PGP SIGNATURE-----
