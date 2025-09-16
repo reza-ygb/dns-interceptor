@@ -19,12 +19,12 @@ dns-interceptor/
 
 ### Method 1: One-Line Installation (Recommended)
 ```bash
-curl -fsSL https://raw.githubusercontent.com/username/dns-interceptor/main/install.sh | bash
+curl -fsSL https://github.com/reza-ygb/dns-interceptor/releases/download/v2.0.1/install.sh | bash
 ```
 
 ### Method 2: Manual Installation
 ```bash
-git clone https://github.com/username/dns-interceptor.git
+git clone https://github.com/reza-ygb/dns-interceptor.git
 cd dns-interceptor
 python3 -m venv venv
 source venv/bin/activate

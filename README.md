@@ -2,7 +2,7 @@
 
 🔥 **Professional Network Security Analysis Tool** - Advanced MITM Framework for Cybersecurity Professionals
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/username/dns-interceptor)
+[![Version](https://img.shields.io/badge/version-2.0.1-blue.svg)](https://github.com/reza-ygb/dns-interceptor)
 [![Python](https://img.shields.io/badge/python-3.8+-green.svg)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
@@ -20,14 +20,14 @@
 ## 🚀 Quick Install (One-Line)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/username/dns-interceptor/main/install.sh | sudo bash
+curl -fsSL https://github.com/reza-ygb/dns-interceptor/releases/download/v2.0.1/install.sh | bash
 ```
 
 ## 📦 Manual Installation
 
 ```bash
 # Clone repository
-git clone https://github.com/username/dns-interceptor.git
+git clone https://github.com/reza-ygb/dns-interceptor.git
 cd dns-interceptor
 
 # Install dependencies
@@ -197,7 +197,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - 📧 **Email**: security@example.com
 - 💬 **Discord**: [Join our community](https://discord.gg/security)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/username/dns-interceptor/issues)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/reza-ygb/dns-interceptor/issues)
 
 ---
 
