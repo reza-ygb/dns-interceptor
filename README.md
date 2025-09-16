@@ -1,0 +1,204 @@
+# DNS Interceptor
+
+🔥 **Professional Network Security Analysis Tool** - Advanced MITM Framework for Cybersecurity Professionals
+
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/username/dns-interceptor)
+[![Python](https://img.shields.io/badge/python-3.8+-green.svg)](https://python.org)
+[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+
+## ⚡ Features
+
+- 🎯 **ARP Spoofing & Network Discovery**
+- 👁️  **Advanced Packet Interception** 
+- 🔓 **SSL/TLS Traffic Analysis**
+- 💀 **Credential Harvesting**
+- 🌐 **DNS Monitoring & Spoofing**
+- 💾 **PCAP Export** for Wireshark/Zeek
+- 📊 **Memory Cache System**
+- 📄 **Professional HTML Reporting**
+
+## 🚀 Quick Install (One-Line)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/username/dns-interceptor/main/install.sh | sudo bash
+```
+
+## 📦 Manual Installation
+
+```bash
+# Clone repository
+git clone https://github.com/username/dns-interceptor.git
+cd dns-interceptor
+
+# Install dependencies
+pip3 install -r requirements.txt
+
+# Make executable
+chmod +x dns_interceptor.py
+```
+
+## 🎯 Usage Examples
+
+### Network Discovery (Safe Mode)
+```bash
+sudo python3 dns_interceptor.py -i eth0 --discovery-only
+```
+
+### Passive Traffic Analysis
+```bash
+sudo python3 dns_interceptor.py -i eth0 --intercept-only --save-pcap capture.pcap
+```
+
+### Single Target Attack
+```bash
+sudo python3 dns_interceptor.py -i eth0 -t 192.168.1.100 -g 192.168.1.1 --attack
+```
+
+### Ultimate Mode (ARP + Interception)
+```bash
+sudo python3 dns_interceptor.py -i eth0 -t 192.168.1.100 -g 192.168.1.1 --ultimate-mode
+```
+
+### Credential Harvesting
+```bash
+sudo python3 dns_interceptor.py -i eth0 --credential-harvest --export-cache
+```
+
+### Mass Network Attack (⚠️ DANGEROUS)
+```bash
+sudo python3 dns_interceptor.py -i eth0 --mass-attack
+```
+
+## 🛠️ Command Line Options
+
+```
+Required:
+  -i, --interface       Network interface (eth0, wlan0, etc.)
+
+Target Specification:
+  -t, --target-ip       Target IP address
+  -g, --gateway-ip      Gateway/Router IP address
+
+Operation Modes:
+  --discovery-only      🔍 Safe network discovery
+  --intercept-only      👁️  Passive packet analysis
+  --attack             ⚠️  Single target ARP attack
+  --ultimate-mode      💀 ARP attack + packet interception
+  --credential-harvest  🔓 Aggressive credential hunting
+  --mass-attack        💥 Network-wide attack (DANGEROUS)
+
+Output Options:
+  --save-pcap FILE     💾 Save packets to PCAP file
+  --export-cache       📊 Export session data (JSON/CSV/TXT)
+  --generate-report    📄 Generate HTML report
+```
+
+## 🔧 Requirements
+
+- **Python 3.8+**
+- **Root privileges** (for raw socket access)
+- **Linux/macOS** (recommended)
+
+## 📋 Dependencies
+
+```bash
+pip3 install scapy
+```
+
+## 🎨 Output Formats
+
+### PCAP Export
+- Compatible with **Wireshark**, **Zeek**, **TCPdump**
+- Full packet capture for forensic analysis
+
+### Cache Export  
+- **JSON**: Structured data for APIs
+- **CSV**: Spreadsheet-compatible format
+- **TXT**: Human-readable summaries
+
+### Memory Cache Features
+- Real-time packet analysis
+- DNS query tracking
+- Credential detection
+- Host discovery
+- Session statistics
+
+## ⚠️ Legal Disclaimer
+
+This tool is for **authorized security testing** and **educational purposes** only. 
+
+- ✅ **Authorized penetration testing**
+- ✅ **Security research on own networks**  
+- ✅ **Educational cybersecurity training**
+- ❌ **Unauthorized network attacks**
+- ❌ **Malicious activities**
+
+Users are responsible for compliance with applicable laws and regulations.
+
+## 🔒 Ethical Usage
+
+- Always obtain **written authorization** before testing
+- Use only on **networks you own** or have permission to test
+- Follow **responsible disclosure** for vulnerabilities
+- Respect **privacy** and **data protection** laws
+
+## 📊 Example Output
+
+```
+🔥 DNS Interceptor v2.0.0 - Professional Network Security Tool 🔥
+⚡ Advanced MITM Framework for Cybersecurity Professionals
+🎯 ARP Spoofing | Packet Analysis | Credential Harvesting
+💀 SSL Strip | DNS Spoofing | PCAP Export | Memory Cache
+
+🌐 [INTERFACE] Using: eth0
+🖥️  [LOCAL-IP] Your IP: 192.168.1.50
+
+👁️  [INTERCEPT] Advanced packet analysis with caching...
+🔍 [HUNTING] Credentials, tokens, cookies, files...
+💾 [PCAP] Saving packets to: capture.pcap
+🚀 [LIVE] Advanced packet interception active...
+
+🌐 [22:41:30] DNS: 192.168.1.100 → google.com
+🔒 [22:41:31] SSL HANDSHAKE: 192.168.1.100 → 142.250.191.14
+🔓 [22:41:32] *** CREDENTIAL CAPTURED! ***
+    🎯 Source: 192.168.1.100:54321
+    🎯 Target: 10.0.0.5:80
+    🔑 Pattern: PASSWORD=
+    📄 Data: POST /login HTTP/1.1...
+
+📊 [STATS] Packets: 1250 | Passwords: 3 | DNS: 95 | Tokens: 12
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🎓 Educational Resources
+
+- [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cybersecurity)
+- [Scapy Documentation](https://scapy.readthedocs.io/)
+
+## 🔗 Related Projects
+
+- [Ettercap](https://www.ettercap-project.org/) - Comprehensive MITM framework
+- [Bettercap](https://www.bettercap.org/) - Modern network attack framework
+- [MITMproxy](https://mitmproxy.org/) - Interactive HTTPS proxy
+
+## 📞 Support
+
+- 📧 **Email**: security@example.com
+- 💬 **Discord**: [Join our community](https://discord.gg/security)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/username/dns-interceptor/issues)
+
+---
+
+⭐ **Star this repository** if you find it useful for your cybersecurity work!
