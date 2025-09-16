@@ -57,6 +57,20 @@ Key details:
 - Algo/Size: RSA 4096
 - Expires: 2027-09-16
 
+If github.io redirects to a custom domain on your network
+
+Use this fallback that fetches directly from raw.githubusercontent.com:
+
+```bash
+sudo install -d -m 0755 /etc/apt/keyrings
+curl -fsSL https://raw.githubusercontent.com/reza-ygb/dns-interceptor/gh-pages/keyring/KEY.asc \
+  | sudo gpg --dearmor -o /etc/apt/keyrings/dns-interceptor.gpg
+echo "deb [signed-by=/etc/apt/keyrings/dns-interceptor.gpg] https://raw.githubusercontent.com/reza-ygb/dns-interceptor/gh-pages stable main" \
+  | sudo tee /etc/apt/sources.list.d/dns-interceptor.list >/dev/null
+sudo apt update
+sudo apt install dns-interceptor
+```
+
 ## 📦 Manual Installation
 
 ```bash
